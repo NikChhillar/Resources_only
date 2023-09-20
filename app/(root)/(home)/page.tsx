@@ -39,7 +39,10 @@ const HomePage = async ({ searchParams }: Props) => {
       {/*  */}
 
       <section className="flex-center mt-6 w-full flex-col sm:mt-20">
-        <Header />
+        <Header
+          query={searchParams?.query || ""}
+          category={searchParams?.category || ""}
+        />
         <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
           {resources?.length > 0 ? (
             resources.map((resource: any) => (
