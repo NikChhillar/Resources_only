@@ -33,6 +33,6 @@ export const getResources = async (params: GetResuorcesParams) => {
 
     //
   } catch (error) {
-    console.log(error);
+    console.log("error getResources", error, "error in actions");
   }
 };
