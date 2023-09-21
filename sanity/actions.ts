@@ -8,7 +8,7 @@ interface GetResuorcesParams {
   page: string;
 }
 
-export const getResourcePlaylist = async () => {
+export const getResourcesPlaylist = async () => {
   try {
     const resources = await readClient.fetch(
       groq`*[_type == "resourcePlaylist"]{
@@ -26,10 +26,8 @@ export const getResourcePlaylist = async () => {
     );
 
     return resources;
-
-    //
   } catch (error) {
-    console.log("error getResources", error, "error in actions");
+    console.log(error);
   }
 };
 
